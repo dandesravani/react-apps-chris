@@ -1,25 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
+import { Tabs } from './components/Tabs';
+import { Routes } from './components/Routes';
 
 function App() {
   return (
-    <div className="app">
-      <div className="browser">
-        <div className="tabs">
-          <div className="tab">
-            <a>Home</a>
-          </div>
-          <div className="tab">
-            <a>About</a>
-          </div>
-          <div className="tab">
-            <a>Features</a>
+    <Router>
+      <div className="app">
+        <div className="browser">
+          <Tabs />
+          <div className="viewport">
+            <Routes />
           </div>
         </div>
-
-        <div className="viewport">Pages Go Here</div>
       </div>
-    </div>
+    </Router>
   );
 }
 
