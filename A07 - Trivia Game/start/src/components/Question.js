@@ -1,14 +1,14 @@
 import React from 'react';
 
-const sampleAnswers = ['One', 'Two', 'Three', 'Four'];
-
-export default function Question() {
+export default function Question({ question, onAnswerSelect }) {
   return (
     <div className="question">
-      <h2>Question Here</h2>
+      <h2 dangerouslySetInnerHTML={{ __html: question.question }} />
 
-      {sampleAnswers.map((answer, index) => (
-        <button key={index}>answer</button>
+      {question.choices.map((choice, index) => (
+        <button key={index} onClick={() => onAnswerSelect(choice)}>
+          {choice}
+        </button>
       ))}
     </div>
   );
