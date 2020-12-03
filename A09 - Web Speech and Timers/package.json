@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-speech-kit": "^3.0.1",
+    "react-timer-hook": "^2.0.5"
+  }
+}
