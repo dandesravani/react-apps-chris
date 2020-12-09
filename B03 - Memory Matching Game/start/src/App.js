@@ -51,7 +51,6 @@ export default function App() {
     if (firstPokemon.name === secondPokemon.name) {
       setMatched((matched) => [...matched, firstPokemon.id]);
     }
-    2;
   }, [opened]);
 
   React.useEffect(() => {
